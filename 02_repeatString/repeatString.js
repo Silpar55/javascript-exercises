@@ -1,5 +1,10 @@
-const repeatString = function() {
-
+const repeatString = function (str, repeat) {
+  let strRepeated = "";
+  while (repeat !== 0) {
+    strRepeated += str;
+    repeat--;
+  }
+  return strRepeated;
 };
 
 // Do not edit below this line
