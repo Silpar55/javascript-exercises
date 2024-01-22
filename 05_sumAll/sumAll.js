@@ -1,5 +1,7 @@
 const sumAll = function (a, b) {
   // we need to know what is the bigger number
+  if (!Number.isInteger(a) || !Number.isInteger(b)) return "ERROR";
+  if (a < 0 || b < 0) return "ERROR";
   let greaterNum = 0;
   let lessNum = 0;
   let sum = 0;

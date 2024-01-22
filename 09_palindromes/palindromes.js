@@ -1,13 +1,7 @@
 const palindromes = function (str) {
-  const original = str;
-  const reverse = str.split("").reverse();
-  let isPalindrome = true;
-
-  for (let i = 0; i < str.length && isPalindrome; i++) {
-    if (original[i] !== reverse[i]) isPalindrome = false;
-  }
-
-  return isPalindrome;
+  const original = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reverse = original.split("").reverse().join("");
+  return original === reverse;
 };
 
 // Do not edit below this line
